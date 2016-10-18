@@ -46,7 +46,7 @@
 	  ?>
 	<br/>
 	<!-- why it is empty -->
-	<video playsinline autoplay loop poster="polina.jpg" id="bgvid">
+	<video playsinline autoplay loop poster="rsc/shopping.jpg" id="bgvid">
   		<source src=<?php echo "\"http://". $_SERVER['HTTP_HOST']."/rsc/openningVideo.mp4"."\""?> type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
