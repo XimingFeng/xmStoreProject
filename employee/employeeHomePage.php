@@ -22,23 +22,8 @@
 
     What do u want(你要爪子)?
     <br>
+    <a href= <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeInsertOrder.php"?>  ></a>
     <h1>Input the information here</h1>
-	<form action = "http://localhost:8888/employee/insertGo.php">
-		brandID: <input type="text" name = "brandID">
-		</input><br>
-		productEnglishName: <input type="text" name = "productEnglishName">
-		</input><br>
-		productChineseName: <input type="text" name = "productChineseName">
-		</input><br>
-		PRCPrice: <input type="text" name = "PRCPrice">
-		</input><br>
-		USAPrice: <input type="text" name = "USAPrice">
-		</input><br>
-		URL: <input type="text" name = "URL"><br>
-		<input type="submit"></input>
-		</input>
-	</form>
-    <br>
     <a href="http://localhost:8888/employee/findProduct.php">Get information</a>
 </body>
 </html>
