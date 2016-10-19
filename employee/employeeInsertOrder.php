@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeInsertOrder.php"?> method = "post" enctype = "multipart/form-data">
+	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php"?> method = "post" enctype = "multipart/form-data">
 		brandID: <input type="text" name = "brandID">
 		</input><br>
 
