@@ -6,7 +6,7 @@
 	$databasePasswords = "ximing1993";
 	$targetDatabase = "xmStore";
 
-	if(isset($_POST["submit"])){
+	if(isset($_POST["registerSubmit"])){
 		echo "submit is set";
 		if((!isset($_POST["newUserName"])) || (!isset($_POST["newUserPassword"]))){
 			$_SESSION['registerError'] = "The user name or password is empty";

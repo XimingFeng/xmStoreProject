@@ -36,7 +36,7 @@
 								<label for="pwd">Password:</label>
 								<input type="password" name = "newUserpassword"  placeholder="密码" class="form-control" id="pwd">
 							</div>
-    					<input class="btn btn-primary" type="submit"></input>
+    					<input class="btn btn-primary" type="registerSubmit"></input>
     					</form>
     			</div>
 			</div>
