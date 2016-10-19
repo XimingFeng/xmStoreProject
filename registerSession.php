@@ -8,7 +8,7 @@
 
 	if(isset($_POST["submit"])){
 		echo "submit is set";
-		if(empty($_POST["newUserName"]) || empty($_POST["newUserPassword"])){
+		if((!isset($_POST["newUserName"])) || (!isset($_POST["newUserPassword"])){
 			$_SESSION['registerError'] = "The user name or password is empty";
 			// $error = "User name or password is invalid";
 		}
