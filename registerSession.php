@@ -43,7 +43,6 @@
 			$row = $query->num_rows;
 			if($row >= 1){
 				$_SESSION['registerError'] = $_SESSION['registerError']."<br/>" ."you have already registered in our website sweat heart!";
-				// header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
 			}else{
 				
 				$sql = "
@@ -53,6 +52,8 @@
 				$query = $connection->query($sql);
 				if($query == true){
 					echo "register successed af";
+					header("Location: http://".$_SERVER['HTTP_HOST']."/employee/employeeHomePage.php");
+					$_SESSION['login_user'] = $userName;
 				}else{
 					$_SESSION['registerError'] = $connection->error;
 				}

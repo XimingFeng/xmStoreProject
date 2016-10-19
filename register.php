@@ -1,10 +1,5 @@
  <?php
 	include('registerSession.php'); 
-	if(isset($_SESSION['newUser'])){
-		// The header() function sends a raw HTTP header to a client.
-		$_SESSION['login_user'] = $_SESSION['newUser'];
-		header("Location: http://".$_SERVER['HTTP_HOST']."/employee/employeeHomePage.php");
-	}
 ?>
 
 <!DOCTYPE html>
