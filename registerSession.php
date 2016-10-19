@@ -1,4 +1,3 @@
-
 <?php
 	session_start();
 	$databaseUser = "db_user";
@@ -6,19 +5,17 @@
 	$databasePort = 3306;
 	$databasePasswords = "ximing1993";
 	$targetDatabase = "xmStore";
-	echo "login page start";
-	echo $_SERVER['HTTP_HOST'];
 
 	if(isset($_POST["submit"])){
 		echo "submit is set";
-		if(empty($_POST["userName"]) || empty($_POST["password"])){
-			echo "inValid User Name";
+		if(empty($_POST["newUserName"]) || empty($_POST["newUserPassword"])){
+			$_SESSION['registerError'] = "The user name or password is empty";
 			// $error = "User name or password is invalid";
 		}
 	}
 	else{
-		$userName = $_POST["userName"];
-		$password = $_POST["password"];
+		$userName = $_POST["newUserName"];
+		$password = $_POST["newUserPassword"];
 		echo "<br/>";
 		echo "The submission is not empty";
 		echo "The user name is ".$userName."<br/>";
@@ -43,14 +40,15 @@
 			echo $sql;
 			$query = $connection->query($sql);
 			$row = $query->num_rows;
-			if($row == 1){
-				echo "Congrat! We found ya!";
-				$_SESSION['login_user'] = $_POST["userName"];
-				echo "session Login user is ".$_SESSION['login_user'];
-				echo $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php";
-				header("Location: http://".$_SERVER['HTTP_HOST']."/employee/employeeHomePage.php");
+			if($row >= 1){
+				$_SESSION['registerError'] = $_SESSION['registerError']."<br/>" ."you have already registered in our website sweat heart!";
+				header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
 			}else{
-				echo "sorry we didn't find u ~";
+				$sql = "
+					INSERT INTO xmStore
+					VALUES('$password', '$userName');
+				";
+				$query = $connection->query($sql);
 			}
 
 			
@@ -59,7 +57,4 @@
   	
 
 	}
-
-	
-	
 ?>
