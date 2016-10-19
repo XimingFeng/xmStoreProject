@@ -26,7 +26,7 @@
 		<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 						<h1>Sign Up!</h1>
-						<form action=<?php echo "\"http://". $_SERVER['HTTP_HOST'] . "/register,php\"";?> method="post" 
+						<form action=<?php echo "\"http://". $_SERVER['HTTP_HOST'] . "/register.php\"";?> method="post" 
 							class="form-vertical">
 							<div class="form-group">
 								<label for="email">Email address:</label>
