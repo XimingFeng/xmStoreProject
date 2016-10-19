@@ -20,10 +20,10 @@
 		USAPrice: <input type="text" name = "USAPrice">
 		</input><br>
 
-		<input type="file" name="productPic" > </input><br>
+		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 
 		URL: <input type="text" name = "URL"> </input><br>
-		<input type="submit"></input>
+		<input type="submit" name = "insertOrder"></input>
 		</input>
 	</form>
     <br>
