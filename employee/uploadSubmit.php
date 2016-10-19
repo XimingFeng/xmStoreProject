@@ -14,5 +14,29 @@
 			echo "file is not an image.";
 			$uploadOK = 0;
 		}
-	} 
+	}
+	if (file_exists($targetFile)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+	}
+	// Check file size
+	if ($_FILES["picToUpload"]["size"] > 500000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+	}if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+		&& $imageFileType != "gif" ) {
+    	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    	$uploadOk = 0;
+	}
+	if($uploadOk == 0){
+		echo "Sorry, your file was not uploaded.";
+	}else{
+		if(move_uploaded_file($_FILES['picToUpload']["temp_name"], $targetFile)){
+			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
+		}
+		else{
+			echo "sth is wrong when uploading your file";
+		}
+	}
+	
 ?>
