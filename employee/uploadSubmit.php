@@ -19,7 +19,7 @@
 
 	if (file_exists($targetFile)) {
     	echo "Sorry, file already exists.";
-    	$uploadOk = 0;
+    	$uploadOK = 0;
 	}else{
 		echo "your file does not exist in our website.";
 	}
@@ -27,7 +27,7 @@
 	// Check file size
 	if ($_FILES["picToUpload"]["size"] > 500000) {
     	echo "Sorry, your file is too large.";
-    	$uploadOk = 0;
+    	$uploadOK = 0;
 	}else{
 		echo "your file's size is good. ";
 	}
@@ -35,12 +35,12 @@
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 		&& $imageFileType != "gif" ) {
     	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    	$uploadOk = 0;
+    	$uploadOK = 0;
 	}else{
 		echo "file type is good";
 	}
 
-	if($uploadOk == 0){
+	if($uploadOK == 0){
 		echo "Sorry, your file was not uploaded.";
 	}
 	else{
