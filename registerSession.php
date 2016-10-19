@@ -47,7 +47,7 @@
 			}else{
 				
 				$sql = "
-					INSERT INTO employee
+					INSERT INTO employee (password, userName)
 					VALUES('$password', '$userName');
 				";
 				$query = $connection->query($sql);
