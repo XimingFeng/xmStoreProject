@@ -5,6 +5,7 @@
 	$databasePort = 3306;
 	$databasePasswords = "ximing1993";
 	$targetDatabase = "xmStore";
+	$_SESSION['registerError'] = "";
 
 	if(isset($_POST['registerSubmit'])){
 		echo "submit is not set";
@@ -59,5 +60,6 @@
 
 	}
 	}
+	echo "The error is ". $_SESSION['registerError'];
 	
 ?>
