@@ -22,7 +22,8 @@
 
     What do u want(你要爪子)?
     <br>
-    <a href= <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeInsertOrder.php"?>  > Insert an order</a>
+    <a href= <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeInsertOrder.php\""?>  > Insert an order</a>
+
     <h1>Input the information here</h1>
     <a href="http://localhost:8888/employee/findProduct.php">Get information</a>
 </body>
