@@ -46,7 +46,7 @@
 				// header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
 			}else{
 				$sql = "
-					INSERT INTO xmStore
+					INSERT INTO xmstore
 					VALUES('$password', '$userName');
 				";
 				$query = $connection->query($sql);
