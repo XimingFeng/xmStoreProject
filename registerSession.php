@@ -12,8 +12,7 @@
 			$_SESSION['registerError'] = "The user name or password is empty";
 			// $error = "User name or password is invalid";
 		}
-	}
-	else{
+		else{
 		echo "the value of registerSubmit is ". (string)$_POST['registerSubmit'];
 		$userName = $_POST["newUserName"];
 		$password = $_POST["newUserPassword"];
@@ -59,4 +58,6 @@
   	
 
 	}
+	}
+	
 ?>
