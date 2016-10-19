@@ -1,5 +1,5 @@
 <?php
-	echo "here we go, is is uploadSubmit.php"
+	echo "here we go, is is uploadSubmit.php";
 	$uploadDir = "/upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
 	$uploadOK = 1;
