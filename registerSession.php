@@ -50,6 +50,11 @@
 					VALUES('$password', '$userName');
 				";
 				$query = $connection->query($sql);
+				if($query == true){
+					echo "register successed af";
+				}else{
+					$_SESSION['registerError'] = $connection->error;
+				}
 				echo "The results of the insert query is ".(string)$query;
 			}
 
