@@ -45,8 +45,9 @@
 				$_SESSION['registerError'] = $_SESSION['registerError']."<br/>" ."you have already registered in our website sweat heart!";
 				// header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
 			}else{
+				$db = mysqli_select_db($connection, "xmStore");
 				$sql = "
-					INSERT INTO xmstore
+					INSERT INTO xmStore
 					VALUES('$password', '$userName');
 				";
 				$query = $connection->query($sql);
