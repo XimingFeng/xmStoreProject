@@ -42,13 +42,14 @@
 			$row = $query->num_rows;
 			if($row >= 1){
 				$_SESSION['registerError'] = $_SESSION['registerError']."<br/>" ."you have already registered in our website sweat heart!";
-				header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
+				// header("Location: http://".$_SERVER['HTTP_HOST']."/register.php");
 			}else{
 				$sql = "
 					INSERT INTO xmStore
 					VALUES('$password', '$userName');
 				";
 				$query = $connection->query($sql);
+				echo "The results of the insert query is ".(string)$query;
 			}
 
 			
