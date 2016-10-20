@@ -20,6 +20,7 @@
   						console.log("The name is: " + productNames[i] + "/n");
   						var node = document.createElement("option");
   						node.value = productNames[i];
+  						node.innerHTML = productNames[i];
   						document.getElementById("productName").appendChild(node);
   					}
   				}
