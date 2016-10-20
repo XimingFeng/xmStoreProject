@@ -14,7 +14,7 @@
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
   					alert(this.responseText);
-  					productNames = this.responseText.split(" ");
+  					var productNames = this.responseText.split(" ");
   					for(i = 0; i < productNames.length; i++){
   						var node = document.createElement("option");
   						node.setAttrribute("value", productNames[i]);
