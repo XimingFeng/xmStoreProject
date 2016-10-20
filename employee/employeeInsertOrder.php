@@ -17,8 +17,9 @@
   					var numOfProduct = productNames.length;
   					alert("the number of product is" + numOfProduct);
   					for(var i = 0; i < numOfProduct; i ++){
+
   						var node = document.createElement("option");
-  						node.setAttrribute("value", productNames[i]);
+  						node.setAttribute("value", productNames[i]);
   						document.getElementByID("productName").appendChild(node);
   					}
   				}
