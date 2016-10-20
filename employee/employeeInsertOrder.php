@@ -19,6 +19,7 @@
 				";
 
 				$result = $connection->query($sql);
+				
 				echo "query finished";
 
 				if ($result->num_rows > 0) {
@@ -31,7 +32,6 @@
     			else {
     				echo "0 results";
 				}
-			*/
 			?>
 			
 		</select><br>
