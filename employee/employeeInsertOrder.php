@@ -13,7 +13,7 @@
     		var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
-  					alert("response good");
+  					alert(this.responseText);
   					document.getElementByID("productName").innerHTML = this.responseText;
   				}
   				else{
