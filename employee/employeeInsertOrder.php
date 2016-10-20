@@ -8,8 +8,7 @@
 	<title></title>
 	<script type="text/javascript">
     	// function to send an ajax request to server in order to show product according to brand selected
-    	function showProduct(){
-    		brandName = document.getElementByID("brandName").value;
+    	function showProduct(brandName){
     		alert("brandName is " + brandName);
 
     		var xhttp = new XMLHttpRequest();
@@ -31,7 +30,7 @@
 <body>
 	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
 		brand: 
-		<select id = "brandName" name = "brandName" onchange = "showProduct();" >
+		<select id = "brandName" name = "brandName" onchange = "showProduct(this.value);" >
 			<?php
 
 				$sql = "
