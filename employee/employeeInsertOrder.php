@@ -5,20 +5,19 @@
 </head>
 <body>
 	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
-		brandID: <input type="text" name = "brandID">
-		</input><br>
+		brand: 
+		<select id = "brandName" name = "brandName">
+			
+		</select><br>
 
-		productEnglishName: <input type="text" name = "productEnglishName">
-		</input><br>
+		product English name or Chinese name: 
+		<select>
+			
+		</select><br>
 
-		productChineseName: <input type="text" name = "productChineseName">
-		</input><br>
-
-		PRCPrice: <input type="text" name = "PRCPrice">
-		</input><br>
-
-		USAPrice: <input type="text" name = "USAPrice">
-		</input><br>
+		<input type="text" name="entail price" placeholder="好多钱嘛！">
+			
+		</input>
 
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 
