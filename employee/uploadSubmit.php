@@ -7,7 +7,7 @@
 	$imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION) ;
 	echo "target file is ". $targetFile. ".   ";
 	if(isset($_POST['insertOrder'])){
-		$check = getimagesize($_FILES['picToUpload']['tmp_name'], $targetFile);
+		$check = getimagesize($_FILES['picToUpload']['tmp_name']);
 		if($check !== false){
 			echo "file is an image - ".$check["mime"]. ".";
 			$uploadOK = 1;
