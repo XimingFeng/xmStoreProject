@@ -26,7 +26,7 @@
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
     				echo "find a brand!";
-        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " <option>";
+        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
     				}
     			}
     			else {
