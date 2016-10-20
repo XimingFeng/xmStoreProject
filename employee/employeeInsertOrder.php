@@ -20,11 +20,11 @@
   						console.log("The name is: " + productNames[i] + "/n");
   						var node = document.createElement("option");
   						node.setAttribute("value", productNames[i]);
-  						document.getElementByID("productName").appendChild(node);
+  						document.getElementById("productName").appendChild(node);
   					}
   				}
   				else{
-  					document.getElementByID("productName").innerHTML = "no response shows";
+  					document.getElementById("productName").innerHTML = "no response shows";
   				}
   			}
   			xhttp.open("GET", "showProduct.php?brandName="+brandName, true);
