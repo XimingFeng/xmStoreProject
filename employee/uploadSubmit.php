@@ -48,7 +48,9 @@
 		echo "Sorry, your file was not uploaded.";
 	}
 	else{
-		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], "upload/")){
+		echo '     $_FILES['picToUpload']['tmp_name'] is first argument    ';
+		echo '    $targetFile is the second argument    ';
+		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], "$targetFile")){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 		}
 		else{
