@@ -14,7 +14,12 @@
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
   					alert(this.responseText);
-  					document.getElementByID("productName").innerHTML = this.responseText;
+  					productNames = this.responseText.split(" ");
+  					for(i = 0; i < productNames.length; i++){
+  						var node = document.createElement("option");
+  						node.setAttrribute("value", productNames[i]);
+  						document.getElementByID("productName").appendChild(node);
+  					}
   				}
   				else{
   					document.getElementByID("productName").innerHTML = "no response shows";
