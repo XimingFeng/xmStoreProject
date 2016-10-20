@@ -17,7 +17,7 @@
   					var numOfProduct = productNames.length;
   					alert("the number of product is" + numOfProduct);
   					for(var i = 0; i < numOfProduct; i ++){
-
+  						console.log("The name is: " + productNames[i] + "/n");
   						var node = document.createElement("option");
   						node.setAttribute("value", productNames[i]);
   						document.getElementByID("productName").appendChild(node);
