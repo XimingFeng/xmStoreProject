@@ -60,6 +60,7 @@
     	// function to send an ajax request to server in order to show product according to brand selected
     	function showProduct(){
     		brandName = document.getElementByID("brandName").value;
+    		alert("brandName is " + brandName);
 
     		var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function(){
