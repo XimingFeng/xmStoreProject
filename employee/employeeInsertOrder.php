@@ -37,7 +37,10 @@
 		</select><br>
 
 		product English name or Chinese name: 
-		<select id = "productName">
+		<p id = "productName">
+			we have this 
+		</p>
+		<select id = "productNam">
 			
 		</select><br>
 
@@ -62,6 +65,9 @@
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
   					document.getElementByID("productName").innerHTML = this.responseText;
+  				}
+  				else{
+  					document.getElementByID("productName").innerHTML = "no response shows";
   				}
   			}
   			xhttp.open("GET", "showProduct.php?brandName="+brandName, true);
