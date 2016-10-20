@@ -8,7 +8,7 @@
 	if(isset($_POST['insertOrder'])){
 		$check = getimagesize($_FILES['picToUpload']['tmp_name'], $targetFile);
 		if($check !== false){
-			echo "file is an iamge - ".$check["mime"]. ".";
+			echo "file is an image - ".$check["mime"]. ".";
 			$uploadOK = 1;
 		}
 		else{
@@ -17,6 +17,9 @@
 		}
 	}
 
+	if(file("upload")){
+		echo " yes babe, there is a file called upload";
+	}
 
 	if (file_exists($targetFile)) {
     	echo "Sorry, file already exists.";
@@ -45,7 +48,7 @@
 		echo "Sorry, your file was not uploaded.";
 	}
 	else{
-		if(move_uploaded_file($_FILES['picToUpload']["tmp_name"], $targetFile)){
+		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], $targetFile)){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 		}
 		else{
