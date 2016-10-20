@@ -10,7 +10,7 @@
 <body>
 	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
 		brand: 
-		<select id = "brandName" name = "brandName">
+		<select id = "brandName" name = "brandName" onchange = "showProduct()" >
 			<?php
 
 				$sql = "
@@ -26,8 +26,7 @@
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
     				echo "find a brand!";
-        			echo "<option onchange = \" showProduct() \" 
-        			value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
+        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
     				}
     			}
     			else {
