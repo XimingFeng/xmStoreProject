@@ -5,6 +5,7 @@
 	echo "target file is ". $targetFile. ".   ";
 	$uploadOK = 1;
 	$imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION) ;
+	echo "target file is ". $targetFile. ".   ";
 	if(isset($_POST['insertOrder'])){
 		$check = getimagesize($_FILES['picToUpload']['tmp_name'], $targetFile);
 		if($check !== false){
@@ -16,6 +17,7 @@
 			$uploadOK = 0;
 		}
 	}
+	echo "target file is ". $targetFile. ".   ";
 
 	if(file_exists("upload")){
 		echo " yes babe, there is a file called upload";
