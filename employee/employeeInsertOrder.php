@@ -1,3 +1,7 @@
+<?php
+	include('session.php');
+  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +11,22 @@
 	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
 		brand: 
 		<select id = "brandName" name = "brandName">
+			<?php
+				$sql = "
+					select brandEnglishName
+					from brand
+				";
+				$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+    				// output data of each row
+    				while($row = $result->fetch_assoc()) {
+        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " <option>";
+    				}
+    			}else {
+    				echo "0 results";
+				}
+
+			?>
 			
 		</select><br>
 
@@ -17,7 +37,7 @@
 
 		<input type="text" name="entail price" placeholder="好多钱嘛！">
 			
-		</input>
+		</input><br>
 
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 

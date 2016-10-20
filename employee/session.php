@@ -6,6 +6,19 @@
     $databasePasswords = "ximing1993";
     $targetDatabase = "xmStore";
     echo "session Login user is ".$_SESSION['login_user'];
+    //create an dataBase connection
+    $connection = mysqli_connect($databaseDNS, $databaseUser, $databasePasswords, $targetDatabase, $databasePort);
+    if (mysqli_connect_errno())
+    {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+    else{
+        echo "connection to mysql successed !!!!!";
+
+        $db = mysqli_select_db($connection, "xmStore");
+    }
+
+    
     /*
     if(!isset($_SESSION['login_user'])){
         mysqli_close($connection);
