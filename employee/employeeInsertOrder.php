@@ -17,12 +17,16 @@
 					from brand
 				";
 				$result = $conn->query($sql);
+				echo "query finished";
+
 				if ($result->num_rows > 0) {
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
-        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " <option>";
+    				echo "find a brand!";
+        			//echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " <option>";
     				}
-    			}else {
+    			}
+    			else {
     				echo "0 results";
 				}
 
