@@ -9,11 +9,11 @@
 	<script type="text/javascript">
     	// function to send an ajax request to server in order to show product according to brand selected
     	function showProduct(brandName){
-    		alert("brandName is " + brandName);
 
     		var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
+  					alert("response good");
   					document.getElementByID("productName").innerHTML = this.responseText;
   				}
   				else{
@@ -57,10 +57,7 @@
 		</select><br>
 
 		product English name or Chinese name: 
-		<p id = "productName">
-			we have this 
-		</p>
-		<select id = "productNam">
+		<select id = "productName">
 			
 		</select><br>
 
