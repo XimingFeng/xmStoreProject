@@ -6,6 +6,27 @@
 <html>
 <head>
 	<title></title>
+	<script type="text/javascript">
+    	// function to send an ajax request to server in order to show product according to brand selected
+    	function showProduct(){
+    		brandName = document.getElementByID("brandName").value;
+    		alert("brandName is " + brandName);
+
+    		var xhttp = new XMLHttpRequest();
+  			xhttp.onreadystatechange = function(){
+  				if (this.readyState == 4 && this.status == 200) {
+  					document.getElementByID("productName").innerHTML = this.responseText;
+  				}
+  				else{
+  					document.getElementByID("productName").innerHTML = "no response shows";
+  				}
+  			}
+  			xhttp.open("GET", "showProduct.php?brandName="+brandName, true);
+  			xhttp.send();
+
+    	}
+
+    </script>
 </head>
 <body>
 	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
@@ -55,28 +76,6 @@
 		</input>
 	</form>
     <br>
-
-    <script type="text/javascript">
-    	// function to send an ajax request to server in order to show product according to brand selected
-    	function showProduct(){
-    		brandName = document.getElementByID("brandName").value;
-    		alert("brandName is " + brandName);
-
-    		var xhttp = new XMLHttpRequest();
-  			xhttp.onreadystatechange = function(){
-  				if (this.readyState == 4 && this.status == 200) {
-  					document.getElementByID("productName").innerHTML = this.responseText;
-  				}
-  				else{
-  					document.getElementByID("productName").innerHTML = "no response shows";
-  				}
-  			}
-  			xhttp.open("GET", "showProduct.php?brandName="+brandName, true);
-  			xhttp.send();
-
-    	}
-
-    </script>
 
 </body>
 </html>
