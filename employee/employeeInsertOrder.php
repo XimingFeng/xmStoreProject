@@ -12,6 +12,7 @@
 		brand: 
 		<select id = "brandName" name = "brandName">
 			<?php
+			/*
 				$sql = "
 					select brandEnglishName
 					from brand
@@ -29,7 +30,7 @@
     			else {
     				echo "0 results";
 				}
-
+			*/
 			?>
 			
 		</select><br>
