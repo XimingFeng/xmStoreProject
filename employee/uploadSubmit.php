@@ -17,7 +17,7 @@
 		}
 	}
 
-	if(file("upload")){
+	if(file_exists("upload")){
 		echo " yes babe, there is a file called upload";
 	}
 
