@@ -17,8 +17,8 @@
 					select brandEnglishName
 					from brand
 				";
-				/*
-				$result = $conn->query($sql);
+
+				$result = $connection->query($sql);
 				echo "query finished";
 
 				if ($result->num_rows > 0) {
