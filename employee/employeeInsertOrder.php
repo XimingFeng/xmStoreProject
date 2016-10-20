@@ -12,11 +12,12 @@
 		brand: 
 		<select id = "brandName" name = "brandName">
 			<?php
-			/*
+
 				$sql = "
 					select brandEnglishName
 					from brand
 				";
+				/*
 				$result = $conn->query($sql);
 				echo "query finished";
 
