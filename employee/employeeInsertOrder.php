@@ -26,7 +26,8 @@
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
     				echo "find a brand!";
-        			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
+        			echo "<option onchange = \" showProduct() \" 
+        			value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
     				}
     			}
     			else {
@@ -37,11 +38,11 @@
 		</select><br>
 
 		product English name or Chinese name: 
-		<select>
+		<select id = "productName">
 			
 		</select><br>
 
-		<input type="text" name="entail price" placeholder="好多钱嘛！">
+		<input type="text" name="entailPrice" placeholder="好多钱嘛！">
 			
 		</input><br>
 
@@ -52,6 +53,24 @@
 		</input>
 	</form>
     <br>
+
+    <script type="text/javascript">
+    	// function to send an ajax request to server in order to show product according to brand selected
+    	function showProduct(){
+    		brandName = document.getElementByID("brandName").value;
+
+    		var xhttp = new XMLHttpRequest();
+  			xhttp.onreadystatechange = function(){
+  				if (this.readyState == 4 && this.status == 200) {
+  					document.getElementByID("productName").innerHTML = this.responseText;
+  				}
+  			}
+  			xhttp.open("GET", "showProduct.php?brandName="+brandName, true);
+  			xhttp.send();
+
+    	}
+
+    </script>
 
 </body>
 </html>
