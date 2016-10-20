@@ -9,10 +9,11 @@
 		WHERE brandEnglishName = '$brandName';
 	";
 	$result = $connection->query($sql);
+
 	if ($result->num_rows > 0) {
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
-    				$productNames = $row["productEnglishName"]. " ";
+    				$productNames = $productNames + $row["productEnglishName"]. " ";
     				}
     }
     echo $productNames;
