@@ -13,9 +13,10 @@
     		var xhttp = new XMLHttpRequest();
   			xhttp.onreadystatechange = function(){
   				if (this.readyState == 4 && this.status == 200) {
-  					alert(this.responseText);
   					var productNames = this.responseText.split(" ");
-  					for(var i = 0; i < productNames.length; i++){
+  					var numOfProduct = productNames.length;
+  					alert("the number of product is" + numOfProduct);
+  					for(var i = 0; i < numOfProduct; i ++){
   						var node = document.createElement("option");
   						node.setAttrribute("value", productNames[i]);
   						document.getElementByID("productName").appendChild(node);
