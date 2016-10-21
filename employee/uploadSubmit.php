@@ -58,6 +58,7 @@
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 			// upload user pic to s3
 			require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+			/*
 			try{
 				$s3->putObject(array(
 					'Bucket' => 'lasticbeanstalk-us-west-2-772115187324',
@@ -70,7 +71,7 @@
 			}
 			// after the file is uploaded to S3, remove it from server
 			unlink($targetFile);
-			
+			*/
 
 		}
 		else{
