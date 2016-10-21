@@ -8,7 +8,7 @@
 	try{
 		$s3 = S3Client::factory(array(
 			'version' => 'latest',
-    		'region'  => 'us-east-1'
+    		'region'  => 'us-west-2'
 		));
 		$buckets = $s3->listBuckets();
 	}catch(Exception $e){
