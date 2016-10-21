@@ -1,6 +1,6 @@
 <?php
 	use Aws\S3\S3Client;
-	require($_SERVER['HTTP_HOST'] . '/vendor/autoload.php');
+	require '/vendor/autoload.php';
 	// echo $_SERVER['HTTP_HOST'] . '/vendor/autoload.php';
 	echo 'If the file exits:   ' . file_exists($_SERVER['HTTP_HOST'] . '/vendor/autoload.php');
 	// $config = require('uploadConfig.php');
