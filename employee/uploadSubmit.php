@@ -62,7 +62,7 @@
 			try{
 				$result = $s3->putObject(array(
 					'Bucket' => 'elasticbeanstalk-us-west-2-772115187324',
-					'Key' => 'userPicUpLoad/uploadTest.jpeg',
+					'Key' => 'userPicUpload/uploadTest.jpeg',
 					'Body' => fopen($targetFile, 'rb'),
 					'ACL' => 'public-read'
 				));
