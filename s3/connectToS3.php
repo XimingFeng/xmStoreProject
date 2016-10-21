@@ -6,7 +6,9 @@
 	
 	try{
 		$s3 = S3Client::factory(array(
-		'profile' => 'Ximing'
+		'profile' => 'Ximing',
+		'version' => 'latest',
+		'region'   => 'us-west-2'
 		));
 		$buckets = $s3->listBuckets();
 	}catch(Exception $e){
