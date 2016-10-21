@@ -1,7 +1,7 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
 	echo "--------".'http://'. $_SERVER['HTTP_HOST'] .'/s3/connectToS3.php'."----------------";
-	// require 'http://'. $_SERVER['HTTP_HOST'] .'/s3/connectToS3.php';
+	require '../s3/connectToS3.php';
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
