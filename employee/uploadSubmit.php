@@ -1,5 +1,7 @@
 <?php
-	// use Aws/S3/Exception/S3Exception;
+	
+	require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+	use Aws\S3\Exception\S3Exception;
 	
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
@@ -57,7 +59,7 @@
 		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], $targetFile)){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 			// upload user pic to s3
-			// require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+			
 			/*
 			try{
 				$s3->putObject(array(
