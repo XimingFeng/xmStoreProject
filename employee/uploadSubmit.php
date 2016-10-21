@@ -1,6 +1,6 @@
 <?php
 	
-	require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+	// require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
 	use Aws\S3\Exception\S3Exception;
 	
 	echo "here we go, this is uploadSubmit.php";
