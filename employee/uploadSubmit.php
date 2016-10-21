@@ -60,12 +60,13 @@
 			
 			
 			try{
-				$s3->putObject(array(
+				$result = $s3->putObject(array(
 					'Bucket' => 'lasticbeanstalk-us-west-2-772115187324',
-					'key' => 'userPicUpLoad/uploadTest.jpeg',
-					'body' => fopen($targetFile, 'rb'),
+					'Key' => 'userPicUpLoad/uploadTest.jpeg',
+					'Body' => fopen($targetFile, 'rb'),
 					'ACL' => 'public-read'
 				));
+				echo $result['Body'];
 			} catch(S3Exception $e){
 				die("there was an erroe uploading, you dumb ass!");
 			}
