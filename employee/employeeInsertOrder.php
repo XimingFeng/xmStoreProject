@@ -15,7 +15,7 @@
   				if (this.readyState == 4 && this.status == 200) {
   					var productNames = this.responseText.split(" ");
   					var numOfProduct = productNames.length;
-  					alert("the number of product is" + numOfProduct);
+  					// alert("the number of product is" + numOfProduct);
   					for(var i = 0; i < numOfProduct; i ++){
   						console.log("The name is: " + productNames[i] + "/n");
   						var node = document.createElement("option");
@@ -48,12 +48,12 @@
 
 				$result = $connection->query($sql);
 				
-				echo "query finished";
+				// echo "query finished";
 
 				if ($result->num_rows > 0) {
     				// output data of each row
     				while($row = $result->fetch_assoc()) {
-    				echo "find a brand!";
+    				// echo "find a brand!";
         			echo "<option value = \"" . $row['brandEnglishName']. "\">". $row['brandEnglishName'] . " </option>";
     				}
     			}

@@ -13,7 +13,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
     else{
-        echo "connection to mysql successed !!!!!";
+        // echo "connection to mysql successed !!!!!";
 
         $db = mysqli_select_db($connection, "xmStore");
     }
