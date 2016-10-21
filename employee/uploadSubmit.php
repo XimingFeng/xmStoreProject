@@ -1,5 +1,5 @@
 <?php
-	use Aws/S3/Exception/S3Exception;
+	// use Aws/S3/Exception/S3Exception;
 	
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
