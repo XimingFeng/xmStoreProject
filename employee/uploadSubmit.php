@@ -1,8 +1,7 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
-	echo "--------".'http://'. $_SERVER['HTTP_HOST'] .'/s3/connectToS3.php'."----------------";
 	require '../s3/connectToS3.php';
-	echo "here we go, this is uploadSubmit.php";
+	// echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
 	echo "target file is ". $targetFile. ".   ";
@@ -59,7 +58,7 @@
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 			// upload user pic to s3
 			
-			/*
+			
 			try{
 				$s3->putObject(array(
 					'Bucket' => 'lasticbeanstalk-us-west-2-772115187324',
@@ -72,7 +71,7 @@
 			}
 			// after the file is uploaded to S3, remove it from server
 			unlink($targetFile);
-			*/
+			
 
 		}
 		else{
