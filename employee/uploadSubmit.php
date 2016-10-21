@@ -1,4 +1,5 @@
 <?php
+	use Aws/S3/Exception/S3Exception;
 	
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
@@ -57,6 +58,18 @@
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 			// upload user pic to s3
 			require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+			try{
+				$s3->putObject(array(
+					'Bucket' => 'lasticbeanstalk-us-west-2-772115187324',
+					'key' => 'userPicUpLoad/uploadTest.jpeg',
+					'body' => fopen($targetFile, 'rb'),
+					'ACL' => 'public-read'
+				));
+			} catch(S3Exception $e){
+				die("there was an erroe uploading, you dumb ass!");
+			}
+			// after the file is uploaded to S3, remove it from server
+			unlink($targetFile);
 			
 
 		}
