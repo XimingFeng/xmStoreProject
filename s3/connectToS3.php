@@ -6,8 +6,8 @@
 	
 	
 	$s3 = S3Client::factory(array(
-		'profile' => 'default'
+		'profile' => 'Ximing'
 	));
-	
+
 	echo "haha";
 ?>
