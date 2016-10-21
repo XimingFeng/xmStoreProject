@@ -1,7 +1,6 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
-	$pathToConnectToS3 = $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
-	require $pathToConnectToS3;
+	require 'xmstore.royxm.com/s3/connectToS3.php';
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
