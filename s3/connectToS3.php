@@ -9,4 +9,5 @@
 		'profile' => 'default'
 	));
 	
+	echo "haha";
 ?>
