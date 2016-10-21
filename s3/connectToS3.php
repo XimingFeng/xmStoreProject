@@ -3,6 +3,7 @@
 	require 'vendor/autoload.php';
 	
 	echo 'If the file exits:   ' . file_exists('vendor');
+	date_default_timezone_set('UTC');
 	
 	try{
 		$s3 = S3Client::factory(array(
