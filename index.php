@@ -41,6 +41,11 @@
 	</style>
 </head>
 <body>
+	<h1>
+		大家注意啦！！！！<br>
+		包子是gay！！！！！！！<br>
+		廖兴也是gay！！！！！！<br>
+	</h1>
 	<?php
 		echo $error;
 	  ?>
