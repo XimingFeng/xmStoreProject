@@ -4,10 +4,15 @@
 	
 	echo 'If the file exits:   ' . file_exists('vendor');
 	
-	
-	$s3 = S3Client::factory(array(
+	try{
+		$s3 = S3Client::factory(array(
 		'profile' => 'Ximing'
-	));
+		));
+		$buckets = $s3->listBuckets();
+	}catch(Exception $e){
+		exit($e->getMessage());
+	}
+	
 
 	echo "haha";
 ?>
