@@ -68,7 +68,14 @@
 				));
 				echo $result['Body'];
 			} catch(S3Exception $e){
+				echo $e->getMessage();
 				die("there was an erroe uploading, you dumb ass!");
+			}catch (AwsException $e) {
+    			// This catches the more generic AwsException. You can grab information
+    			// from the exception using methods of the exception object.
+    			echo $e->getAwsRequestId() . "\n";
+    			echo $e->getAwsErrorType() . "\n";
+    			echo $e->getAwsErrorCode() . "\n";
 			}
 			// after the file is uploaded to S3, remove it from server
 			unlink($targetFile);
