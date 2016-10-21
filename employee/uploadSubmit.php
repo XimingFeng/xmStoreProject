@@ -56,6 +56,8 @@
 		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], $targetFile)){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 			// upload user pic to s3
+			require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
+			
 
 		}
 		else{

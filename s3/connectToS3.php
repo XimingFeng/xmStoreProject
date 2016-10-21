@@ -8,4 +8,5 @@
 	$s3 = S3Client::factory(array(
 		'profile' => 'default'
 	));
+	
 ?>
