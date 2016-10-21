@@ -1,7 +1,7 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
 	// require $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php';
-	echo "------whether the file exist". $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php:'.$_SERVER['HTTP_HOST'] . '/s3/connectToS3.php'. "--------------";
+	echo "------whether the file exist". $_SERVER['HTTP_HOST'] . '/s3/connectToS3.php:'.file_exists($_SERVER['HTTP_HOST'] . '/s3/connectToS3.php'). "--------------";
 	echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
