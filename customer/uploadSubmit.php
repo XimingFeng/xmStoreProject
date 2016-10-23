@@ -2,7 +2,6 @@
 	use Aws\S3\Exception\S3Exception;
 	require '../s3/connectToS3.php';
 
-	$_POST[''] = 
 	// echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
