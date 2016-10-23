@@ -21,7 +21,7 @@
     }else{
     	echo "Hey we find your introducer!<br>";
     	$row_result = $query_result->fetch_assoc();
-    	$introducerID = $row_result['employeeID'];
+    	$introducerID = $row_result	['employeeID'];
     	echo "the employeeID is:  " . $introducerID . "<br>";
     	$sql = "
     		INSERT INTO requestOrders
@@ -31,6 +31,7 @@
     	if($query_result){
     		echo "order is generated successfully! <br>";
     	}else{
+    		echo $connection->error.<br>;
     		echo "order is not generated, sorry!";
     	}
 
