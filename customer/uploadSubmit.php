@@ -2,11 +2,11 @@
 	use Aws\S3\Exception\S3Exception;
 	define("ROOT", "/var/www/html");
 	require ROOT.'/s3/connectToS3.php';
+	
 
 	// echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
-	echo "target file is ". $targetFile. "<br>   ";
 	$uploadOK = 1;
 	$imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION) ;
 	echo "target file is ". $targetFile. "<br>";

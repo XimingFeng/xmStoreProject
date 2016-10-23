@@ -62,9 +62,10 @@
 				}
 			?>
 		</select><br>
-		product English name or Chinese name: 
+		Product English name or Chinese name: 
 		<select id = "productName" name="productName"> </select><br>
 		</input><br>
+    Introducer: <input type="text" name="introducer"></input><br>
     描述<input type="text" name="description"></input><br>
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 		URL: <input type="text" name = "URL"> </input><br>
