@@ -8,11 +8,11 @@
 	echo "target file is ". $targetFile. "<br>   ";
 	$uploadOK = 1;
 	$imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION) ;
-	echo "target file is ". $targetFile. ".   ";
+	echo "target file is ". $targetFile. "<br>";
 	if(isset($_POST['insertOrder'])){
 		$check = getimagesize($_FILES['picToUpload']['tmp_name']);
 		if($check !== false){
-			echo "file is an image - ".$check["mime"]. ".";
+			echo "file is an image - ".$check["mime"]. "<br>";
 			$uploadOK = 1;
 		}
 		else{
@@ -20,17 +20,17 @@
 			$uploadOK = 0;
 		}
 	}
-	echo "target file is ". $targetFile. ".   ";
+	echo "target file is ". $targetFile. "<br>";
 
 	if(file_exists("upload")){
-		echo " yes babe, there is a file called upload";
+		echo " yes babe, there is a file called upload". "<br>";
 	}
 
 	if (file_exists($targetFile)) {
     	echo "Sorry, file already exists.";
     	$uploadOK = 0;
 	}else{
-		echo "your file does not exist in our website.";
+		echo "your file does not exist in our website. <br>";
 	}
 
 	// Check file size
@@ -38,7 +38,7 @@
     	echo "Sorry, your file is too large.";
     	$uploadOK = 0;
 	}else{
-		echo "your file's size is good. ";
+		echo "your file's size is good. <br>";
 	}
 
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -46,15 +46,15 @@
     	echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     	$uploadOK = 0;
 	}else{
-		echo "file type is good";
+		echo "file type is good <br>";
 	}
 
 	if($uploadOK == 0){
-		echo "Sorry, your file was not uploaded.";
+		echo "Sorry, your file was not uploaded. <br>";
 	}
 	else{
-		echo $_FILES['picToUpload']['tmp_name']. " is the first argument";
-		echo $targetFile. " is the second argument";
+		echo $_FILES['picToUpload']['tmp_name']. " is the first argument <br>";
+		echo $targetFile. " is the second argument <br>";
 		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], $targetFile)){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
 
@@ -83,7 +83,7 @@
 
 		}
 		else{
-			echo "sth is wrong when uploading your file";
+			echo "sth is wrong when uploading your file <br>";
 		}
 
 
