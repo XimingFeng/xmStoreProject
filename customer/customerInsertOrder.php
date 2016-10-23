@@ -36,7 +36,7 @@
     </script>
 </head>
 <body>
-	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/customer/customerHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
+	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/customer/customerTempOrder.php\""?> method = "POST" enctype = "multipart/form-data">
 		brand: 
 		<select id = "brandName" name = "brandName" onchange = "showProduct(this.value);" >
 			<?php
@@ -65,6 +65,7 @@
 		product English name or Chinese name: 
 		<select id = "productName" name="productName"> </select><br>
 		</input><br>
+    描述<input type="text" name="description"></input><br>
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 		URL: <input type="text" name = "URL"> </input><br>
 		<input type="submit" name = "insertOrder"></input>

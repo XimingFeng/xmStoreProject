@@ -1,6 +1,5 @@
 <?php
 	include('session.php');
-	include('uploadSubmit.php')
 ?>
 <!DOCTYPE html>
 <html>
