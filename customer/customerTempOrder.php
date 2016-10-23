@@ -7,7 +7,7 @@
 	$url = $_POST['URL'];
 	$introducer = $_POST['introducer'];
 	$quantity = $_POST['quantity'];
-	$date = getdate();
+	$date = date("Y-m-d H:i:s");
 	$sql = "
         	SELECT * 
         	FROM employee
@@ -24,8 +24,8 @@
     	$introducerID = $row_result	['employeeID'];
     	echo "the employeeID is:  " . $introducerID . "<br>";
     	$sql = "
-    		INSERT INTO requestOrders
-    		VALUES(default, $employeeID, default, $quantity, '$date', default, default, '$description', '$url');
+    		INSERT INTO requestOrders(orderID, employeeID, productID, quantity, orderDate, placed, shipmentID, description, URL)
+    		VALUES(default, '$introducerID', default, $quantity, '$date', default, default, '$description', '$url');
     	";
     	echo $sql."<br>";
     	$query_result = $connection->query($sql);
