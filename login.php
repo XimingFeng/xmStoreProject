@@ -38,7 +38,7 @@
 			"
 			select *
 			from customer
-			where password = '$password' and customerName = '$userName'
+			where password = '$password' and Email = '$userName'
 			";
 			echo $sql;
 			$query = $connection->query($sql);
