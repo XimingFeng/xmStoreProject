@@ -11,6 +11,7 @@
         	FROM employee
         	WHERE employeeName = '$introducer';
         ";
+    echo $sql."<br>";
     $query_result = $connection->query($sql);
     $row = $query->num_rows;
     if($row == 0){
