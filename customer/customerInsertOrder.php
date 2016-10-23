@@ -36,7 +36,7 @@
     </script>
 </head>
 <body>
-	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
+	<form action = <?php  echo "\" http://". $_SERVER['HTTP_HOST']."/customer/customerHomePage.php\""?> method = "POST" enctype = "multipart/form-data">
 		brand: 
 		<select id = "brandName" name = "brandName" onchange = "showProduct(this.value);" >
 			<?php
