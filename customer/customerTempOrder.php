@@ -14,7 +14,7 @@
         ";
     echo $sql."<br>";
     $query_result = $connection->query($sql);
-    $row = $query->num_rows;
+    $row = $query_result->num_rows;
     if($row == 0){
     	echo "sorry, didn't find ur introducer<br>";
     }else{
