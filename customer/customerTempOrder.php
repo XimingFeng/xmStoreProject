@@ -31,13 +31,21 @@
     	$query_result = $connection->query($sql);
     	if($query_result){
     		echo "order is generated successfully! <br>";
-    	}else{
-    		echo $connection->error."<br>";
     		echo "order is not generated, sorry!";
     		$sql = "
     			SELECT * 
     			FROM requestOrders
+    			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
     		";
+    		$query_result = $connection->query($sql);
+    		$row_result = $query_result->fetch_assoc();
+    		$orderID = $row_result['orderID'];
+    		echo "orderID is ". $orderID. "<br>";
+
+    	}else{
+    		echo $connection->error."<br>";
+    		
+
 
     	}
 
