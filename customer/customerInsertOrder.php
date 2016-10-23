@@ -66,6 +66,7 @@
 		<select id = "productName" name="productName"> </select><br>
 		</input><br>
     Introducer: <input type="text" name="introducer"></input><br>
+    Quantity: <input type="text" name="quantity"></input><br>
     描述<input type="text" name="description"></input><br>
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
 		URL: <input type="text" name = "URL"> </input><br>
