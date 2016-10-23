@@ -5,7 +5,7 @@
 	// echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
-	echo "target file is ". $targetFile. ".   ";
+	echo "target file is ". $targetFile. "<br>   ";
 	$uploadOK = 1;
 	$imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION) ;
 	echo "target file is ". $targetFile. ".   ";
