@@ -1,6 +1,5 @@
 <?php
 	include('session.php');
-	include('uploadSubmit.php');
 	$description = $_POST['description'];
 	$brand = $_POST['brandName'];
 	$productName = $_POST['productName'];
@@ -31,7 +30,7 @@
     	$query_result = $connection->query($sql);
     	if($query_result){
     		echo "order is generated successfully! <br>";
-    		echo "order is not generated, sorry!";
+    		
     		$sql = "
     			SELECT * 
     			FROM requestOrders
@@ -41,12 +40,11 @@
     		$row_result = $query_result->fetch_assoc();
     		$orderID = $row_result['orderID'];
     		echo "orderID is ". $orderID. "<br>";
+    		include('uploadSubmit.php');
 
     	}else{
     		echo $connection->error."<br>";
-    		
-
-
+    		echo "order is not generated, sorry!";
     	}
 
     }
