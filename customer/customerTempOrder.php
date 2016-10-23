@@ -6,7 +6,7 @@
 	$productName = $_POST['productName'];
 	$url = $_POST['URL'];
 	$introducer = $_POST['introducer'];
-	$db = mysqli_select_db($connection, "xmStore");
+	// $db = mysqli_select_db($connection, "xmStore");
 	$sql = "
         	SELECT * 
         	FROM employee
