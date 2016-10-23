@@ -1,6 +1,6 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
-	define("ROOT", "/var/www/html")
+	define("ROOT", "/var/www/html");
 	require ROOT.'/s3/connectToS3.php';
 
 	// echo "here we go, this is uploadSubmit.php";
