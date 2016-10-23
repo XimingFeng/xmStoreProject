@@ -31,7 +31,7 @@
     	if($query_result){
     		echo "order is generated successfully! <br>";
     	}else{
-    		echo $connection->error.<br>;
+    		echo $connection->error."<br>";
     		echo "order is not generated, sorry!";
     	}
 
