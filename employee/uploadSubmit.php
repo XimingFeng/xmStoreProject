@@ -1,6 +1,8 @@
 <?php
 	use Aws\S3\Exception\S3Exception;
 	require '../s3/connectToS3.php';
+
+	$_POST[''] = 
 	// echo "here we go, this is uploadSubmit.php";
 	$uploadDir = "upload/";
 	$targetFile = $uploadDir. basename($_FILES['picToUpload']['name']);
@@ -56,9 +58,8 @@
 		echo $targetFile. " is the second argument";
 		if(move_uploaded_file($_FILES['picToUpload']['tmp_name'], $targetFile)){
 			echo "The file ". basename( $_FILES["picToUpload"]["name"]). " has been uploaded.";
+
 			// upload user pic to s3
-			
-			
 			try{
 				$result = $s3->putObject(array(
 					'Bucket' => 'elasticbeanstalk-us-west-2-772115187324',
@@ -85,6 +86,9 @@
 		else{
 			echo "sth is wrong when uploading your file";
 		}
+
+
+
 
 		
 		

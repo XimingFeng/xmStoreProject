@@ -1,6 +1,6 @@
 <?php
 	include('session.php');
-  ?>
+?>
 
 <!DOCTYPE html>
 <html>
@@ -61,20 +61,11 @@
     				echo "0 results";
 				}
 			?>
-			
 		</select><br>
-
 		product English name or Chinese name: 
-		<select id = "productName">
-			
-		</select><br>
-
-		<input type="text" name="entailPrice" placeholder="好多钱嘛！">
-			
+		<select id = "productName" name="productName"> </select><br>
 		</input><br>
-
 		<input type="file" name="picToUpload" id = "picToUpload"> </input><br>
-
 		URL: <input type="text" name = "URL"> </input><br>
 		<input type="submit" name = "insertOrder"></input>
 		</input>
