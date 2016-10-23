@@ -1,8 +1,8 @@
 <?php
 	use Aws\S3\S3Client;
-	// require 'http://'.$_SERVER['HTTP_HOST'].'/vendor/autoload.php';
+	// require 'http://'.$_SERVER['HTTP_HOST'].'/s3/vendor/autoload.php';
 	
-	echo 'If the file vender exits:   ' . file_exists('http://'.$_SERVER['HTTP_HOST'].'/vendor/autoload.php')."<br>";
+	echo 'If the file vender exits:   ' . file_exists('http://'.$_SERVER['HTTP_HOST'].'/s3/vendor/autoload.php')."<br>";
 	date_default_timezone_set('UTC');
 	
 	try{
