@@ -20,8 +20,8 @@
     	echo "sorry, didn't find ur introducer<br>";
     }else{
     	echo "Hey we find your introducer!<br>";
-    	$row = $result->fetch_assoc();
-    	$introducerID = $row['employeeID'];
+    	$row_result = $query_result->fetch_assoc();
+    	$introducerID = $row_result['employeeID'];
     	echo "the employeeID is:  " . $introducerID . "<br>";
     	$sql = "
     		INSERT INTO requestOrders
