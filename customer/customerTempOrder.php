@@ -24,7 +24,7 @@
     	$introducerID = $row_result	['employeeID'];
     	echo "the employeeID is:  " . $introducerID . "<br>";
     	$sql = "
-    		INSERT INTO requestOrders(orderID, employeeID, productID, quantity, orderDate, placed, shipmentID, description, URL)
+    		INSERT INTO requestOrders(orderID, employeeID, productID, quantity, orderDateTime, placed, shipmentID, description, URL)
     		VALUES(default, '$introducerID', default, $quantity, '$date', default, default, '$description', '$url');
     	";
     	echo $sql."<br>";
@@ -34,6 +34,11 @@
     	}else{
     		echo $connection->error."<br>";
     		echo "order is not generated, sorry!";
+    		$sql = "
+    			SELECT * 
+    			FROM requestOrders
+    		";
+
     	}
 
     }
