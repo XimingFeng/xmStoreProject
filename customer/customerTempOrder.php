@@ -27,6 +27,7 @@
     		INSERT INTO requestOrders
     		VALUES(default, $employeeID, default, $quantity, '$date', default, default, '$description', '$url');
     	";
+    	echo $sql."<br>";
     	$query_result = $connection->query($sql);
     	if($query_result){
     		echo "order is generated successfully! <br>";
