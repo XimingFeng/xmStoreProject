@@ -16,7 +16,7 @@
     if($row == 0){
     	echo "sorry, didn't find ur introducer<br>";
     }else{
-    	echo "Hey we find your introducer!<br>"
+    	echo "Hey we find your introducer!<br>";
     }
 
 ?>
