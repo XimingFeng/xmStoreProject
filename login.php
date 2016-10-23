@@ -37,8 +37,8 @@
   			$sql = 
 			"
 			select *
-			from employee
-			where password = '$password' and userName = '$userName'
+			from customer
+			where password = '$password' and customerName = '$userName'
 			";
 			echo $sql;
 			$query = $connection->query($sql);
@@ -47,8 +47,8 @@
 				// echo "Congrat! We found ya!";
 				$_SESSION['login_user'] = $_POST["userName"];
 				// echo "session Login user is ".$_SESSION['login_user'];
-				echo $_SERVER['HTTP_HOST']."/employee/employeeHomePage.php";
-				header("Location: http://".$_SERVER['HTTP_HOST']."/employee/employeeHomePage.php");
+				echo $_SERVER['HTTP_HOST']."/customer/customerHomePage.php";
+				header("Location: http://".$_SERVER['HTTP_HOST']."/customer/customerHomePage.php");
 			}else{
 				echo "sorry we didn't find u ~";
 			}

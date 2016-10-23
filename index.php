@@ -2,7 +2,7 @@
 	include('login.php'); 
 	if(isset($_SESSION['loginUser'])){
 		// The header() function sends a raw HTTP header to a client.
-		header("Location: http://".$_SERVER['HTTP_HOST']."/employee/employeeHomePage.php");
+		header("Location: http://".$_SERVER['HTTP_HOST']."/customer/customerHomePage.php");
 	}
 
 	
