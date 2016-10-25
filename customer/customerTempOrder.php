@@ -48,5 +48,56 @@
     	}
 
     }
-
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is your order detail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Order Detail</h2>
+    <table class="table table-bodered">
+        <tr>
+            <th>Order ID</th>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <th>Introducer</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>Product Name</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>Order Date Time</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>Description</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>URL</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>Picture</th>
+            <td></td>
+        </tr>
+        
+
+    </table>
+    
+</div>
+
+</body>
+</html>
