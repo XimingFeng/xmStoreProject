@@ -33,7 +33,10 @@
     		
     		$sql = "
     			SELECT * 
-    			FROM requestOrders
+    			FROM requestOrders INNER JOIN employee
+                        ON requestOrders.employeeID = employee.employeeID
+                    INNER JOIN product
+                        ON requestOrders.productID = product.productID
     			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
     		";
     		$query_result = $connection->query($sql);
@@ -61,36 +64,41 @@
     <table class="table table-bordered">
         <tr>
             <th>Order ID</th>
-            <td></td>
+            <td>    <?php echo  $row_result['orderID']; ?> </td>
         </tr>
         
         <tr>
             <th>Introducer</th>
-            <td></td>
+            <td>    <?php echo  $row_result['employeeName']; ?> </td>
         </tr>
 
         <tr>
             <th>Product Name</th>
-            <td></td>
+            <td>    <?php echo  $row_result['productEnglishName']; ?> </td>
         </tr>
 
         <tr>
             <th>Order Date Time</th>
-            <td></td>
+            <td>    <?php echo  $row_result['orderDateTime']; ?></td>
         </tr>
 
         <tr>
             <th>Description</th>
-            <td></td>
+            <td>    <?php echo  $row_result['description']; ?> </td>
         </tr>
 
         <tr>
             <th>URL</th>
-            <td></td>
+            <td>    <?php echo  $row_result['URL']; ?>  </td>
         </tr>
 
         <tr>
             <th>Picture</th>
+            <td></td>
+        </tr>
+
+        <tr>
+            <th>Price</th>
             <td></td>
         </tr>
         
