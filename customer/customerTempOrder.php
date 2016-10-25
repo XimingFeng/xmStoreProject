@@ -58,7 +58,7 @@
 <body>
 <div class="container">
     <h2>Order Detail</h2>
-    <table class="table table-bodered">
+    <table class="table table-bordered">
         <tr>
             <th>Order ID</th>
             <td></td>
