@@ -37,6 +37,7 @@
                         ON requestOrders.employeeID = employee.employeeID
     			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
     		";
+            echo $sql."<br>";
     		$query_result = $connection->query($sql);
             if($query_result){
                 echo $connection->error."<br>";
