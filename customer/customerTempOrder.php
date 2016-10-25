@@ -35,7 +35,7 @@
     			SELECT * 
     			FROM requestOrders INNER JOIN employee
                         ON requestOrders.employeeID = employee.employeeID
-    			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
+    			WHERE orderDateTime = '$date' AND employeeID = $introducerID;
     		";
             echo $sql."<br>";
     		$query_result = $connection->query($sql);
