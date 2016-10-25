@@ -62,12 +62,12 @@
     <table class="table table-bordered">
         <tr>
             <th>Order ID</th>
-            <td>    <?php echo  $row_result['orderID']; ?> </td>
+            <td>    <?php echo $row_result['orderID']; ?> </td>
         </tr>
         
         <tr>
             <th>Introducer</th>
-            <td>    <?php echo  $row_result['employeeName']; ?> </td>
+            <td>    <?php echo $row_result['employeeName']; ?> </td>
         </tr>
 
         <tr>
@@ -77,17 +77,17 @@
 
         <tr>
             <th>Order Date Time</th>
-            <td>    <?php echo  $row_result['orderDateTime']; ?></td>
+            <td>    <?php echo $row_result['orderDateTime']; ?></td>
         </tr>
 
         <tr>
             <th>Description</th>
-            <td>    <?php echo  $row_result['description']; ?> </td>
+            <td>    <?php echo $row_result['description']; ?> </td>
         </tr>
 
         <tr>
             <th>URL</th>
-            <td>    <?php echo  $row_result['URL']; ?>  </td>
+            <td>    <?php echo $row_result['URL']; ?>  </td>
         </tr>
 
         <tr>
