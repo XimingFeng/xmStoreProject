@@ -38,11 +38,15 @@
     			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
     		";
     		$query_result = $connection->query($sql);
-    		$row_result = $query_result->fetch_assoc();
-    		$orderID = $row_result['orderID'];
-    		echo "orderID is ". $orderID. "<br>";
-    		include('uploadSubmit.php');
-
+            if($query_result){
+                echo $connection->error."<br>";
+            }
+            else{
+                $row_result = $query_result->fetch_assoc();
+                $orderID = $row_result['orderID'];
+                echo "orderID is ". $orderID. "<br>";
+                include('uploadSubmit.php');
+            }
     	}else{
     		echo $connection->error."<br>";
     		echo "order is not generated, sorry!";
