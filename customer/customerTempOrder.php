@@ -35,8 +35,6 @@
     			SELECT * 
     			FROM requestOrders INNER JOIN employee
                         ON requestOrders.employeeID = employee.employeeID
-                    INNER JOIN product
-                        ON requestOrders.productID = product.productID
     			WHERE orderDateTime = '$date' AND employeeID = '$introducerID';
     		";
     		$query_result = $connection->query($sql);
@@ -74,7 +72,7 @@
 
         <tr>
             <th>Product Name</th>
-            <td>    <?php echo  $row_result['productEnglishName']; ?> </td>
+            <td></td>
         </tr>
 
         <tr>
